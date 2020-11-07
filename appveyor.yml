@@ -45,9 +45,9 @@ install:
   - ps: Restart-Computer -Force      # here the server goes restarting
   - set PATH=C:\Ruby23\bin;%PATH%
 
- build_script:
+build_script:
    -  bundle install || bundle install || bundle install
 
 
- test_script:
+test_script:
    - bundle exec kitchen verify windows
