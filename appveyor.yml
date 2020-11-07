@@ -46,8 +46,8 @@ install:
   - set PATH=C:\Ruby23\bin;%PATH%
 
 build_script:
-   -  bundle install || bundle install || bundle install
-
+   #-  bundle install || bundle install || bundle install
+   - set PATH=C:\Ruby23\bin;%PATH%
 
 test_script:
    - bundle exec kitchen verify windows
