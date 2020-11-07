@@ -1,0 +1,10 @@
+<Configuration> 
+  <Add OfficeClientEdition="<%= @edition || 64 %>" 
+       Channel="<%= @channel || 'Broad' %>">
+   <Product ID="<%= @product_id || 'O365ProPlusRetail' %>"> 
+     <Language ID="en-us" />      
+   </Product> 
+  </Add> 
+  <Display Level="None" 
+           AcceptEULA="TRUE" />
+</Configuration>
