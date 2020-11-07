@@ -48,4 +48,4 @@ build_script:
    - set PATH=C:\Ruby23\bin;%PATH%
 
 test_script:
-   - kitchen verify 
+   - bundle exec kitchen verify 
