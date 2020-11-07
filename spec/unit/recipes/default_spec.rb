@@ -17,9 +17,3 @@
 # limitations under the License.
 
 require 'spec_helper'
-
-language_id = node['office2016']['language'] || 'en-us'
-
-it 'installs ms office365' do
-  expect(chef_run).to install_package "Microsoft Office 365 ProPlus - #{language_id}"
-end
