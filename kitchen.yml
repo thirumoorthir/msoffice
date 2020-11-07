@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 4096
+
+provisioner:
+  name: chef_zero
+
+platforms:
+- name: windows-2012R2
+  driver_config:
+    box: tas50/windows_2012r2
+- name: windows-2016
+  driver_config:
+    box: tas50/windows_2016
+- name: windows-2019
+  driver_config:
+    box: tas50/windows_2016
+
+verifier:
+  name: inspec
+
+suites:
+  - name: chef_infra_12
+    provisioner:
+      product_name: chef
+      product_version: 12.15
+    run_list:
+      - recipe[office2016::default]
