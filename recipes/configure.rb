@@ -21,7 +21,7 @@ Chef::Resource::RegistryKey.send(:include, EBT::Helpers)
 key_path = 'HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration'
 
 registry_key key_path do
-  values [{ name: 'SharedComputerLicensing', type: :string, data: 1 }
+  values [{ name: 'SharedComputerLicensing', type: :string, data: 1 },
          ]
   action :create
   only_if { registry_key_exists?(key_path) && remote_desktop_session_host? }

@@ -13,7 +13,7 @@ has_rdsh = cmd_to_run.downcase.match?(/installed/)
 if os.name =~ /server/ && has_rdsh
   describe registry_key('HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration') do
     it { should have_property 'SharedComputerLicensing' }
-    its('SharedComputerLicensing') { should eq "1" }
+    its('SharedComputerLicensing') { should eq '1' }
   end
 else
   describe registry_key('HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration') do
