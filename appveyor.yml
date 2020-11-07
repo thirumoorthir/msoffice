@@ -10,8 +10,6 @@ environment:
   machine_port: 5985
   KITCHEN_YAML: kitchen.yml
   SSL_CERT_FILE: c:\projects\kitchen-machine\certs.pem
-
-
   matrix:
     - ruby_version: "23"
 
@@ -50,4 +48,4 @@ build_script:
    - set PATH=C:\Ruby23\bin;%PATH%
 
 test_script:
-   - bundle exec kitchen verify windows
+   - kitchen verify 
